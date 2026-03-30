@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rodrigo Salviano | Sites profissionais para empresas</title>
+  <meta name="description" content="Rodrigo Salviano desenvolve sites profissionais, modernos e estratégicos para empresas que querem mais credibilidade, presença digital forte e mais clientes no WhatsApp." />
+  <meta name="theme-color" content="#0f1720" />
+  <meta property="og:title" content="Rodrigo Salviano | Sites profissionais para empresas" />
+  <meta property="og:description" content="Portfólio pessoal premium com sites profissionais para empresas que querem vender mais e passar mais confiança." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/rodrigo.jpeg" />
+  <meta name="author" content="Rodrigo Salviano" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#f4f7f8;
+      --bg-soft:#eef3f5;
+      --white:#ffffff;
+      --text:#0f171b;
+      --text-soft:#5f7378;
+      --text-light:#8da1a6;
+      --line:#dde7e9;
+      --line-strong:#cfdbde;
+      --primary:#149ea4;
+      --primary-dark:#107e83;
+      --primary-soft:#e4f8f9;
+      --dark:#111827;
+      --dark-2:#182234;
+      --success:#25D366;
+      --shadow:0 18px 50px rgba(13, 28, 33, 0.08);
+      --shadow-soft:0 10px 24px rgba(13, 28, 33, 0.05);
+      --radius-xl:34px;
+      --radius-lg:26px;
+      --radius-md:20px;
+      --radius-sm:14px;
+      --container:1180px;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"Inter",sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(20,158,164,0.05), transparent 18%),
+        linear-gradient(180deg,#fbfcfc 0%, #f4f7f8 48%, #eef3f5 100%);
+      color:var(--text);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      display:block;
+      width:100%;
+      max-width:100%;
+    }
+
+    button,
+    input,
+    textarea{
+      font:inherit;
+    }
+
+    .container{
+      width:min(calc(100% - 24px), var(--container));
+      margin:0 auto;
+    }
+
+    .section{
+      padding:92px 0;
+      position:relative;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-height:40px;
+      padding:0 14px;
+      border-radius:999px;
+      background:var(--white);
+      border:1px solid #d8ecee;
+      color:var(--primary-dark);
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.04em;
+      margin-bottom:18px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--primary);
+      flex-shrink:0;
+    }
+
+    .section-head{
+      max-width:760px;
+      margin-bottom:36px;
+    }
+
+    .section-head h2{
+      font-size:clamp(2rem, 4vw, 3.25rem);
+      line-height:1.03;
+      letter-spacing:-0.055em;
+      margin-bottom:12px;
+      color:#0f171b;
+    }
+
+    .section-head p{
+      color:var(--text-soft);
+      font-size:1rem;
+      max-width:650px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:56px;
+      padding:0 24px;
+      border-radius:999px;
+      font-weight:800;
+      border:1px solid transparent;
+      cursor:pointer;
+      transition:.28s ease;
+      white-space:nowrap;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--primary) 0%, #24b3b9 100%);
+      color:#fff;
+      box-shadow:0 14px 28px rgba(20,158,164,0.18);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      background:linear-gradient(135deg,var(--primary-dark) 0%, #189ca2 100%);
+    }
+
+    .btn-dark{
+      background:var(--dark);
+      color:#fff;
+      box-shadow:0 12px 26px rgba(17,24,39,0.15);
+    }
+
+    .btn-dark:hover{
+      transform:translateY(-2px);
+      background:#0d1320;
+    }
+
+    .btn-light{
+      background:#fff;
+      color:var(--text);
+      border-color:var(--line);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .btn-light:hover{
+      transform:translateY(-2px);
+      border-color:var(--line-strong);
+    }
+
+    .header{
+      position:sticky;
+      top:0;
+      z-index:1200;
+      background:rgba(255,255,255,0.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(221,231,233,0.74);
+      transition:.3s ease;
+    }
+
+    .header.scrolled{
+      background:rgba(255,255,255,0.96);
+      box-shadow:0 10px 26px rgba(13,28,33,0.05);
+    }
+
+    .nav{
+      min-height:84px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      position:relative;
+    }
+
+    .brand{
+      min-width:0;
+      flex-shrink:0;
+    }
+
+    .brand strong{
+      display:block;
+      font-size:1.12rem;
+      line-height:1;
+      letter-spacing:.14em;
+      font-weight:900;
+      color:#0f171b;
+    }
+
+    .brand span{
+      display:block;
+      margin-top:6px;
+      font-size:.8rem;
+      color:var(--text-soft);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
+
+    .menu a{
+      color:#314548;
+      font-size:.98rem;
+      font-weight:600;
+      position:relative;
+    }
+
+    .menu a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width:0;
+      height:2px;
+      border-radius:999px;
+      background:var(--primary);
+      transition:.25s ease;
+    }
+
+    .menu a:hover::after{
+      width:100%;
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-shrink:0;
+    }
+
+    .menu-toggle{
+      display:none;
+      width:48px;
+      height:48px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:#10181d;
+      font-size:1.08rem;
+      cursor:pointer;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .mobile-panel{
+      display:none;
+      padding-bottom:16px;
+    }
+
+    .mobile-panel.open{
+      display:block;
+    }
+
+    .mobile-links{
+      display:grid;
+      gap:10px;
+      padding:18px;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.97);
+      box-shadow:var(--shadow);
+    }
+
+    .mobile-links a{
+      padding:12px 10px;
+      border-radius:14px;
+      color:#314548;
+      font-weight:600;
+    }
+
+    .mobile-links a:hover{
+      background:#f5f8f9;
+    }
+
+    .hero{
+      padding:72px 0 64px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .hero-copy h1{
+      font-size:clamp(2.8rem, 5.8vw, 5.5rem);
+      line-height:.92;
+      letter-spacing:-0.075em;
+      margin-bottom:18px;
+      max-width:760px;
+      color:#0f171b;
+    }
+
+    .hero-copy p{
+      color:var(--text-soft);
+      font-size:1.05rem;
+      max-width:620px;
+      margin-bottom:28px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:26px;
+    }
+
+    .tech-stack{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .tech-pill{
+      display:inline-flex;
+      align-items:center;
+      min-height:40px;
+      padding:0 14px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      color:#203235;
+      font-size:.88rem;
+      font-weight:700;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .hero-photo-wrap{
+      display:grid;
+      gap:16px;
+    }
+
+    .hero-photo-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:34px;
+      padding:16px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-photo{
+      border-radius:28px;
+      overflow:hidden;
+      background:#e9eef0;
+      aspect-ratio: 4 / 4.8;
+    }
+
+    .hero-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 20%;
+    }
+
+    .hero-info{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .hero-info-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:20px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .hero-info-card strong{
+      display:block;
+      font-size:1.02rem;
+      line-height:1.1;
+      margin-bottom:6px;
+      color:#111b1d;
+    }
+
+    .hero-info-card span{
+      display:block;
+      color:var(--text-soft);
+      font-size:.94rem;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .about-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow-soft);
+      min-height:100%;
+    }
+
+    .about-card strong{
+      display:block;
+      font-size:1.02rem;
+      line-height:1.12;
+      margin-bottom:8px;
+      color:#111b1d;
+    }
+
+    .about-card p{
+      color:var(--text-soft);
+      font-size:.96rem;
+    }
+
+    .portfolio-section{
+      background:linear-gradient(180deg,#ffffff 0%, #f7fafb 100%);
+      border-top:1px solid rgba(221,231,233,0.78);
+      border-bottom:1px solid rgba(221,231,233,0.78);
+    }
+
+    .portfolio-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+
+    .portfolio-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow-soft);
+      transition:.28s ease;
+    }
+
+    .portfolio-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 22px 48px rgba(13,28,33,0.10);
+      border-color:#d1dee1;
+    }
+
+    .portfolio-image{
+      background:#edf3f4;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
+      aspect-ratio: 16 / 9.5;
+    }
+
+    .portfolio-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:top center;
+      transition:transform .35s ease;
+    }
+
+    .portfolio-card:hover .portfolio-image img{
+      transform:scale(1.02);
+    }
+
+    .portfolio-content{
+      padding:24px;
+    }
+
+    .project-badge{
+      display:inline-flex;
+      align-items:center;
+      min-height:32px;
+      padding:0 12px;
+      border-radius:999px;
+      background:#f5fafb;
+      color:var(--primary-dark);
+      border:1px solid #d9ecee;
+      font-size:.79rem;
+      font-weight:800;
+      margin-bottom:12px;
+    }
+
+    .portfolio-content h3{
+      font-size:1.65rem;
+      line-height:1;
+      letter-spacing:-.04em;
+      margin-bottom:10px;
+      color:#0f171b;
+    }
+
+    .portfolio-content p{
+      color:var(--text-soft);
+      margin-bottom:18px;
+      max-width:420px;
+      font-size:.97rem;
+    }
+
+    .portfolio-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .services-grid,
+    .differentials-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .service-card,
+    .differential-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow-soft);
+      min-height:100%;
+    }
+
+    .service-icon,
+    .differential-icon{
+      width:50px;
+      height:50px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      margin-bottom:14px;
+      background:var(--primary-soft);
+      border:1px solid #d3edef;
+      color:var(--primary-dark);
+      font-size:.96rem;
+      font-weight:900;
+    }
+
+    .service-card h3,
+    .differential-card h3{
+      font-size:1.04rem;
+      line-height:1.13;
+      margin-bottom:8px;
+      color:#111b1d;
+    }
+
+    .service-card p,
+    .differential-card p{
+      color:var(--text-soft);
+      font-size:.96rem;
+    }
+
+    .cta-box{
+      background:
+        linear-gradient(135deg, rgba(20,158,164,0.07), rgba(20,158,164,0.03)),
+        #fff;
+      border:1px solid #d8e7e9;
+      border-radius:34px;
+      padding:36px;
+      box-shadow:var(--shadow);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .cta-box h3{
+      font-size:clamp(2rem, 3vw, 3rem);
+      line-height:1.04;
+      letter-spacing:-0.055em;
+      margin-bottom:10px;
+      color:#0f171b;
+      max-width:700px;
+    }
+
+    .cta-box p{
+      color:var(--text-soft);
+      max-width:640px;
+    }
+
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .contact-stack{
+      display:grid;
+      gap:16px;
+    }
+
+    .info-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:var(--shadow-soft);
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+    }
+
+    .info-icon{
+      width:48px;
+      height:48px;
+      border-radius:16px;
+      background:var(--primary-soft);
+      border:1px solid #d3edef;
+      color:var(--primary-dark);
+      display:grid;
+      place-items:center;
+      font-size:.95rem;
+      font-weight:900;
+      flex-shrink:0;
+    }
+
+    .info-card h3{
+      margin-bottom:4px;
+      font-size:1rem;
+      color:#111b1d;
+    }
+
+    .info-card p,
+    .info-card a{
+      color:var(--text-soft);
+      font-size:.96rem;
+    }
+
+    .contact-form{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .field{
+      display:grid;
+      gap:8px;
+    }
+
+    .field.full{
+      grid-column:1 / -1;
+    }
+
+    label{
+      color:#203235;
+      font-size:.93rem;
+      font-weight:600;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      min-height:54px;
+      padding:0 16px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:#fbfdfd;
+      color:#122022;
+      outline:none;
+      transition:.2s ease;
+    }
+
+    textarea{
+      min-height:140px;
+      resize:vertical;
+      padding:16px;
+    }
+
+    input::placeholder,
+    textarea::placeholder{
+      color:#95a8ab;
+    }
+
+    input:focus,
+    textarea:focus{
+      border-color:#b7e6e8;
+      box-shadow:0 0 0 3px rgba(20,158,164,0.10);
+      background:#fff;
+    }
+
+    .footer{
+      margin-top:10px;
+      padding:34px 0 84px;
+      border-top:1px solid #e2ebed;
+      background:#fff;
+    }
+
+    .footer-wrap{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .footer p,
+    .footer a{
+      color:var(--text-soft);
+      font-size:.95rem;
+    }
+
+    .floating-whatsapp{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:1400;
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--success) 0%, #1dad57 100%);
+      color:#fff;
+      box-shadow:0 16px 30px rgba(37,211,102,0.24);
+      border:1px solid rgba(255,255,255,0.18);
+      transition:.25s ease;
+    }
+
+    .floating-whatsapp:hover{
+      transform:translateY(-2px);
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(28px);
+      transition:.72s ease;
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @media (max-width:1120px){
+      .hero-grid,
+      .contact-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .about-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .portfolio-grid,
+      .services-grid,
+      .differentials-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media (max-width:920px){
+      .menu,
+      .desktop-only{
+        display:none;
+      }
+
+      .menu-toggle{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+      }
+
+      .hero{
+        padding:42px 0 52px;
+      }
+
+      .hero-grid,
+      .portfolio-grid,
+      .services-grid,
+      .differentials-grid,
+      .form-grid,
+      .hero-info,
+      .about-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-copy h1{
+        font-size:clamp(2.2rem, 11vw, 4rem);
+        line-height:1.01;
+      }
+
+      .hero-copy p{
+        font-size:.98rem;
+      }
+
+      .hero-actions{
+        display:grid;
+        gap:12px;
+      }
+
+      .section{
+        padding:72px 0;
+      }
+
+      .cta-box{
+        padding:24px;
+      }
+
+      .portfolio-content p{
+        max-width:none;
+      }
+    }
+
+    @media (max-width:560px){
+      .container{
+        width:min(calc(100% - 18px), var(--container));
+      }
+
+      .brand strong{
+        font-size:.98rem;
+      }
+
+      .brand span{
+        font-size:.76rem;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .hero-photo-card,
+      .hero-info-card,
+      .about-card,
+      .portfolio-content,
+      .service-card,
+      .differential-card,
+      .info-card,
+      .contact-form,
+      .cta-box{
+        padding-left:18px;
+        padding-right:18px;
+      }
+
+      .floating-whatsapp{
+        width:48px;
+        height:48px;
+        right:12px;
+        bottom:12px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"Rodrigo Salviano",
+    "description":"Criação de sites profissionais, modernos e estratégicos para empresas que querem vender mais e passar mais confiança.",
+    "telephone":"+55 62 98161-5395",
+    "areaServed":"Brasil"
+  }
+  </script>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#inicio" class="brand" aria-label="Rodrigo Salviano">
+          <strong>RODRIGO SALVIANO</strong>
+          <span>Criação de sites profissionais</span>
+        </a>
+
+        <div class="menu">
+          <a href="#inicio">Início</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#contato">Contato</a>
+        </div>
+
+        <div class="nav-actions">
+          <a class="btn btn-dark desktop-only" href="#" data-whatsapp="Olá! Quero solicitar um orçamento para criar um site profissional.">
+            Solicitar orçamento
+          </a>
+
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+        </div>
+      </nav>
+
+      <div class="mobile-panel" id="mobilePanel">
+        <div class="mobile-links">
+          <a href="#inicio">Início</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#contato">Contato</a>
+          <a class="btn btn-dark" href="#" data-whatsapp="Olá! Quero solicitar um orçamento para criar um site profissional.">
+            Solicitar orçamento
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">Portfólio pessoal premium</div>
+            <h1>Sites profissionais para empresas que querem vender mais e transmitir mais confiança.</h1>
+            <p>
+              Desenvolvo sites modernos, estratégicos e bem apresentados para negócios que querem fortalecer sua presença digital e gerar mais clientes.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#portfolio">Ver portfólio</a>
+              <a class="btn btn-dark" href="#" data-whatsapp="Olá! Quero falar sobre a criação de um site profissional.">
+                Falar no WhatsApp
+              </a>
+            </div>
+
+            <div class="tech-stack">
+              <span class="tech-pill">HTML</span>
+              <span class="tech-pill">CSS</span>
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">Python</span>
+            </div>
+          </div>
+
+          <div class="hero-photo-wrap reveal">
+            <div class="hero-photo-card">
+              <div class="hero-photo">
+                <img src="images/rodrigo.jpeg" alt="Foto de Rodrigo Salviano" />
+              </div>
+            </div>
+
+            <div class="hero-info">
+              <div class="hero-info-card">
+                <strong>Rodrigo Salviano</strong>
+                <span>Desenvolvimento de sites com visual profissional e foco comercial.</span>
+              </div>
+
+              <div class="hero-info-card">
+                <strong>Atendimento direto</strong>
+                <span>Projetos criados para valorizar marcas e facilitar conversão no WhatsApp.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Sobre</div>
+          <h2>Desenvolvimento de sites com posicionamento forte e apresentação premium.</h2>
+          <p>Pouco texto, mais clareza, mais autoridade e foco em resultado.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card reveal">
+            <strong>Especialista em sites profissionais</strong>
+            <p>Projetos pensados para valorizar a marca e melhorar a primeira impressão do cliente.</p>
+          </article>
+
+          <article class="about-card reveal">
+            <strong>Foco em velocidade e responsividade</strong>
+            <p>Sites modernos, rápidos e bem organizados para desktop e celular.</p>
+          </article>
+
+          <article class="about-card reveal">
+            <strong>Base técnica sólida</strong>
+            <p>Trabalho com HTML, CSS, JavaScript e Python para criar estruturas mais completas.</p>
+          </article>
+
+          <article class="about-card reveal">
+            <strong>Mais credibilidade para o negócio</strong>
+            <p>Cada projeto é criado para transmitir mais profissionalismo e confiança.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio-section" id="portfolio">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Portfólio</div>
+          <h2>Projetos criados para apresentar empresas com mais força e profissionalismo.</h2>
+          <p>Prints reais, layout clean e apresentação objetiva.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card reveal">
+            <div class="portfolio-image">
+              <img src="images/elitearmarios.jpeg" alt="Print do site Elite Armários" />
+            </div>
+
+            <div class="portfolio-content">
+              <span class="project-badge">Móveis planejados</span>
+              <h3>Elite Armários</h3>
+              <p>Visual premium para aumentar confiança e valor percebido.</p>
+
+              <div class="portfolio-actions">
+                <a class="btn btn-primary" href="https://elite-armarios.vercel.app" target="_blank" rel="noopener noreferrer">
+                  Ver site online
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-image">
+              <img src="images/purpletrip.jpeg" alt="Print do site Purple Trip" />
+            </div>
+
+            <div class="portfolio-content">
+              <span class="project-badge">Projeto modelo</span>
+              <h3>Purple Trip</h3>
+              <p>Projeto demonstrativo para mostrar versatilidade visual.</p>
+
+              <div class="portfolio-actions">
+                <a class="btn btn-primary" href="https://purple-trip-kappa.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  Ver site online
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-image">
+              <img src="images/elitear.jpeg" alt="Print do site Elite AR" />
+            </div>
+
+            <div class="portfolio-content">
+              <span class="project-badge">Climatização</span>
+              <h3>Elite AR</h3>
+              <p>Site com foco em credibilidade e orçamento rápido no WhatsApp.</p>
+
+              <div class="portfolio-actions">
+                <a class="btn btn-primary" href="https://elite-ar.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  Ver site online
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-image">
+              <img src="images/yagyn.jpeg" alt="Print do site Yagyn" />
+            </div>
+
+            <div class="portfolio-content">
+              <span class="project-badge">Moda / marca / catálogo</span>
+              <h3>Yagyn</h3>
+              <p>Projeto com identidade marcante para apresentação e posicionamento.</p>
+
+              <div class="portfolio-actions">
+                <a class="btn btn-primary" href="https://yagyn.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  Ver site online
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Serviços</div>
+          <h2>Soluções para empresas que querem uma presença digital mais forte.</h2>
+          <p>Estrutura limpa, visual premium e foco em conversão.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">01</div>
+            <h3>Criação de sites profissionais</h3>
+            <p>Sites modernos para negócios que querem se apresentar melhor.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">02</div>
+            <h3>Landing pages</h3>
+            <p>Páginas focadas em impacto, clareza e geração de contato.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">03</div>
+            <h3>Catálogos digitais</h3>
+            <p>Apresentação profissional de produtos, marcas e serviços.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">04</div>
+            <h3>Sites para empresas</h3>
+            <p>Projetos pensados para credibilidade, autoridade e vendas.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">05</div>
+            <h3>Páginas focadas em conversão</h3>
+            <p>Estrutura criada para facilitar o clique no WhatsApp.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">06</div>
+            <h3>Layout responsivo</h3>
+            <p>Design ajustado para celular, tablet e desktop.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Diferenciais</div>
+          <h2>Mais confiança, mais apresentação e mais força comercial para a sua empresa.</h2>
+          <p>Projetos criados para gerar percepção de valor desde o primeiro olhar.</p>
+        </div>
+
+        <div class="differentials-grid">
+          <article class="differential-card reveal">
+            <div class="differential-icon">01</div>
+            <h3>Visual profissional</h3>
+            <p>Layout limpo, alinhado e pronto para impressionar melhor.</p>
+          </article>
+
+          <article class="differential-card reveal">
+            <div class="differential-icon">02</div>
+            <h3>Foco em credibilidade</h3>
+            <p>Estrutura feita para transmitir confiança desde o início.</p>
+          </article>
+
+          <article class="differential-card reveal">
+            <div class="differential-icon">03</div>
+            <h3>Sites pensados para celular</h3>
+            <p>Boa experiência mobile para onde a maior parte dos clientes chega.</p>
+          </article>
+
+          <article class="differential-card reveal">
+            <div class="differential-icon">04</div>
+            <h3>Estrutura para WhatsApp</h3>
+            <p>CTA forte para gerar mais pedidos de orçamento.</p>
+          </article>
+
+          <article class="differential-card reveal">
+            <div class="differential-icon">05</div>
+            <h3>Atendimento rápido</h3>
+            <p>Contato direto, objetivo e sem enrolação.</p>
+          </article>
+
+          <article class="differential-card reveal">
+            <div class="differential-icon">06</div>
+            <h3>Aparência premium</h3>
+            <p>Sites criados para elevar o valor percebido da marca.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div>
+            <h3>Quer um site profissional para o seu negócio?</h3>
+            <p>Solicite um orçamento e apresente sua empresa com muito mais confiança, clareza e padrão visual.</p>
+          </div>
+
+          <a class="btn btn-dark" href="#" data-whatsapp="Olá! Quero solicitar um orçamento para criar um site profissional.">
+            Quero solicitar orçamento
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Contato</div>
+          <h2>Explique seu projeto e receba atendimento rápido.</h2>
+          <p>Preencha os dados e gere uma mensagem pronta no WhatsApp.</p>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="contact-stack">
+            <article class="info-card reveal">
+              <div class="info-icon">WA</div>
+              <div>
+                <h3>WhatsApp</h3>
+                <p><a href="#" data-whatsapp="Olá! Quero falar sobre a criação de um site profissional.">(62) 98161-5395</a></p>
+              </div>
+            </article>
+
+            <article class="info-card reveal">
+              <div class="info-icon">PR</div>
+              <div>
+                <h3>Posicionamento premium</h3>
+                <p>Sites para fortalecer a imagem da empresa e gerar mais confiança.</p>
+              </div>
+            </article>
+
+            <article class="info-card reveal">
+              <div class="info-icon">OK</div>
+              <div>
+                <h3>Atendimento direto</h3>
+                <p>Contato simples, rápido e profissional.</p>
+              </div>
+            </article>
+          </div>
+
+          <form class="contact-form reveal" id="whatsappForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="nome">Seu nome</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required />
+              </div>
+
+              <div class="field">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" placeholder="Nome da empresa" required />
+              </div>
+
+              <div class="field full">
+                <label for="segmento">Segmento</label>
+                <input type="text" id="segmento" placeholder="Ex.: loja, estética, climatização..." required />
+              </div>
+
+              <div class="field full">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" placeholder="Descreva rapidamente o que você precisa."></textarea>
+              </div>
+
+              <div class="field full">
+                <button type="submit" class="btn btn-primary">Enviar pedido</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Rodrigo Salviano. Todos os direitos reservados.</p>
+      <p><a href="#inicio">Voltar ao topo</a></p>
+    </div>
+  </footer>
+
+  <a href="#" class="floating-whatsapp" id="floatingWhatsapp" aria-label="Falar no WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <path d="M27.2 4.8C24.2 1.8 20.3 0.1 16.1 0.1C7.4 0.1 0.3 7.2 0.3 15.9C0.3 18.7 1 21.4 2.3 23.8L0 32L8.4 29.8C10.7 31 13.3 31.7 16 31.7H16.1C24.8 31.7 31.9 24.6 31.9 15.9C31.9 11.7 30.2 7.8 27.2 4.8ZM16.1 29C13.7 29 11.4 28.4 9.4 27.3L8.9 27L3.9 28.4L5.2 23.5L4.9 23C3.7 21 3.1 18.6 3.1 16C3.1 8.8 8.9 3 16.1 3C19.6 3 22.8 4.4 25.3 6.9C27.8 9.4 29.2 12.6 29.2 16C29.1 23.2 23.3 29 16.1 29ZM23.5 19.1C23.1 18.9 21.1 17.9 20.8 17.8C20.4 17.7 20.2 17.6 19.9 18C19.6 18.4 18.8 19.3 18.5 19.6C18.3 19.9 18 19.9 17.6 19.7C15.4 18.6 14 17.8 12.4 15.1C12 14.5 12.8 14.5 13.5 13.1C13.6 12.8 13.6 12.6 13.5 12.3C13.4 12.1 12.6 10.1 12.3 9.4C12 8.8 11.7 8.9 11.4 8.9C11.2 8.9 10.9 8.9 10.7 8.9C10.4 8.9 10 9 9.7 9.4C9.4 9.8 8.5 10.6 8.5 12.4C8.5 14.2 9.8 15.9 10 16.2C10.3 16.5 13.5 21.4 18.3 23.4C21.3 24.7 22.4 24.8 23.3 24.7C24.2 24.6 26 23.7 26.4 22.7C26.8 21.7 26.8 20.9 26.7 20.7C26.5 20.4 26.2 20.3 25.8 20.1L23.5 19.1Z" fill="white"/>
+    </svg>
+  </a>
+
+  <script>
+    const WHATSAPP_NUMBER = "5562981615395";
+
+    const header = document.getElementById("header");
+    const menuToggle = document.getElementById("menuToggle");
+    const mobilePanel = document.getElementById("mobilePanel");
+    const mobileLinks = document.querySelectorAll(".mobile-links a");
+    const whatsappTriggers = document.querySelectorAll("[data-whatsapp]");
+    const floatingWhatsapp = document.getElementById("floatingWhatsapp");
+    const whatsappForm = document.getElementById("whatsappForm");
+    const revealItems = document.querySelectorAll(".reveal");
+
+    function openWhatsApp(message) {
+      const text = encodeURIComponent(message || "Olá! Quero solicitar um orçamento para criar um site profissional.");
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+      window.open(url, "_blank");
+    }
+
+    whatsappTriggers.forEach(item => {
+      item.addEventListener("click", function(e){
+        e.preventDefault();
+        openWhatsApp(item.getAttribute("data-whatsapp"));
+      });
+    });
+
+    floatingWhatsapp.addEventListener("click", function(e){
+      e.preventDefault();
+      openWhatsApp("Olá! Quero solicitar um orçamento para criar um site profissional.");
+    });
+
+    menuToggle.addEventListener("click", function(){
+      mobilePanel.classList.toggle("open");
+      menuToggle.textContent = mobilePanel.classList.contains("open") ? "✕" : "☰";
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", function(){
+        mobilePanel.classList.remove("open");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    window.addEventListener("scroll", function(){
+      if (window.scrollY > 12) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach(item => observer.observe(item));
+
+    whatsappForm.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const nome = document.getElementById("nome").value.trim();
+      const empresa = document.getElementById("empresa").value.trim();
+      const segmento = document.getElementById("segmento").value.trim();
+      const mensagem = document.getElementById("mensagem").value.trim();
+
+      const texto =
+`Olá! Quero criar um site profissional.
+
+*Nome:* ${nome}
+*Empresa:* ${empresa}
+*Segmento:* ${segmento}
+
+*Sobre o projeto:*
+${mensagem || "Vou enviar mais detalhes em seguida."}`;
+
+      openWhatsApp(texto);
+    });
+  </script>
+</body>
+</html>
